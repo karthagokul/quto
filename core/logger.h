@@ -26,9 +26,12 @@ class LoggingPlugin
    public:
         LoggingPlugin(){}
         virtual ~LoggingPlugin(){}
-        virtual void write(const LogType & aLogType,const QString &aLogData);
-        virtual bool start();
-        virtual bool stop();
+        virtual void write(const LogType & aLogType,const QString &aLogData)=0;
+        virtual bool start()=0;
+        virtual bool stop()=0;
+        virtual QString name() const=0;
+        virtual QString author() const=0;
+        virtual bool isActive() const=0;
 };
 
 /*!
@@ -40,12 +43,31 @@ class Logger : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * \brief Logger
+     * \param parent
+     */
     explicit Logger(QObject *parent = 0);
+    /*!
+     * \brief ~Logger
+     */
+    virtual ~Logger();
+    /*!
+     * \brief registerPlugin
+     * \param aPlugin
+     * \return
+     */
+    bool registerPlugin(LoggingPlugin *aPlugin);
+    /*!
+     * \brief unregisterPlugin
+     * \param aPlugin
+     * \return
+     */
+    bool deregisterPlugin(LoggingPlugin *aPlugin);
 
-signals:
-
-public slots:
-
+private:
+    //You can add multiple logging plugins for simultaneous logging
+    QList<LoggingPlugin*> mPlugins;
 };
 }
 }
