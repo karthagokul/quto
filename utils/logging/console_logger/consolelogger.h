@@ -8,7 +8,7 @@ class ConsoleLogger : public Quto::Core::LoggingPlugin
 {
 public:
     ConsoleLogger();
-    virtual void write(const LogType & aLogType,const QString &aLogData);
+    virtual void write(const Quto::Core::LogType & aLogType,const QString &aLogData);
     virtual bool start();
     virtual bool stop();
     virtual QString name() const;

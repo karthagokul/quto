@@ -4,8 +4,10 @@ ConsoleLogger::ConsoleLogger()
 {
 }
 
-void ConsoleLogger::write(const LogType & aLogType,const QString &aLogData)
+void ConsoleLogger::write(const Quto::Core::LogType & aLogType,const QString &aLogData)
 {
+    Q_UNUSED(aLogType);
+    Q_UNUSED(aLogData);
 }
 
 bool ConsoleLogger::start()

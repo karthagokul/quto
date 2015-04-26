@@ -6,4 +6,5 @@ TEMPLATE = subdirs
 #core : the project contains the core hmi components
 
 SUBDIRS = core \
-          utils
+          utils \
+          app

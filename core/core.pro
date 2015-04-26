@@ -1,7 +1,9 @@
 TEMPLATE = lib
 
 HEADERS += \
-    logger.h
+    logger.h \
+    application.h
 
 SOURCES += \
-    logger.cpp
+    logger.cpp \
+    application.cpp
