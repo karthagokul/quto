@@ -9,6 +9,7 @@ namespace Quto
     {
         class EventManager;
         class PluginLoader;
+        class PropertyBank;
         class ApplicationPrivate:public QObject
         {
                 Q_OBJECT
@@ -19,6 +20,7 @@ namespace Quto
             public:
                 QPointer<EventManager> mEventManager;
                 QPointer<PluginLoader> mPluginLoader;
+                QPointer<PropertyBank> mPropertyBank;
         };
     }
 }

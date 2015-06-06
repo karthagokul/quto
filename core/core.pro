@@ -10,7 +10,9 @@ HEADERS += \
     pluginloader.h \
     private/applicationprivate.h \
     servicerunner.h \
-    service.h
+    service.h \
+    propertybank.h \
+    private/propertybankprivate.h
 
 SOURCES += \
     logger.cpp \
@@ -20,4 +22,6 @@ SOURCES += \
     pluginloader.cpp \
     private/applicationprivate.cpp \
     servicerunner.cpp \
-    service.cpp
+    service.cpp \
+    propertybank.cpp \
+    private/propertybankprivate.cpp
