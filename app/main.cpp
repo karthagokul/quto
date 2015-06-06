@@ -1,4 +1,12 @@
+#include "application.h"
+
+
 int main(int argc,char **argv)
 {
-    return 0;
+    Quto::Core::Application app(argc,argv);
+
+    int status=app.exec();
+
+    return status;
+
 }

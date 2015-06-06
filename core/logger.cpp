@@ -15,10 +15,12 @@ Logger::~Logger()
 
 bool Logger::registerPlugin(LoggingPlugin *aPlugin)
 {
+    Q_UNUSED(aPlugin);
     return true;
 }
 
 bool Logger::deregisterPlugin(LoggingPlugin *aPlugin)
 {
+    Q_UNUSED(aPlugin);
     return true;
 }

@@ -5,20 +5,20 @@
 
 namespace Quto
 {
-namespace Core
-{
-class Application : public QGuiApplication
-{
-    Q_OBJECT
-public:
-    explicit Application(int aArgc,char **aArgv);
-
-signals:
-
-public slots:
-
-};
-}
+    namespace Core
+    {
+        class ApplicationPrivate;
+        class Application : public QGuiApplication
+        {
+                Q_OBJECT
+            public:
+                explicit Application(int aArgc,char **aArgv);
+                //TODO : See why app is finishing unexpectedly
+                virtual ~Application();
+            private:
+                ApplicationPrivate *d;
+        };
+    }
 }
 
 
