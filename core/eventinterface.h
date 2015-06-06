@@ -5,6 +5,10 @@ namespace Quto
 {
     namespace Core
     {
+        /*!
+         * \brief The EventInterface class
+         * \author Gokul Kartha <kartha.gokul@gmail.com>
+         */
         class EventInterface
         {
             public:

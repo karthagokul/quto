@@ -11,7 +11,10 @@ namespace Quto
     {
         class EventManagerPrivate;
         class EventInterface;
-
+        /*!
+         * \brief The EventManager class
+         * \author Gokul Kartha <kartha.gokul@gmail.com>
+         */
         class EventManager : public QObject
         {
                 Q_OBJECT

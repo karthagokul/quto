@@ -1,26 +1,14 @@
 #include "application.h"
+#include "private/applicationprivate.h"
+#include "eventmanager.h"
+#include "pluginloader.h"
 
-namespace Quto
-{
-    namespace Core
-    {
-        class ApplicationPrivate
-        {
-            public:
-                ApplicationPrivate();
-        };
-    }
-}
+#include<QPointer>
 
 using namespace Quto::Core;
 
-ApplicationPrivate::ApplicationPrivate()
-{
-
-}
-
 Application::Application(int aArgc,char **aArgv) :
-    QGuiApplication(aArgc,aArgv),d(new ApplicationPrivate())
+    QGuiApplication(aArgc,aArgv),d(new ApplicationPrivate(qApp))
 {
 
 }
@@ -32,4 +20,9 @@ Application::~Application()
         delete d;
         d=0;
     }
+}
+
+EventManager *Application::eventManager() const
+{
+    return d->mEventManager.data();
 }

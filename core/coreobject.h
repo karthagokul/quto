@@ -7,6 +7,10 @@ namespace Quto
 {
     namespace Core
     {
+        /*!
+         * \brief The CoreObject class
+         * \author Gokul Kartha <kartha.gokul@gmail.com>
+         */
         class CoreObject : public QObject
         {
                 Q_OBJECT

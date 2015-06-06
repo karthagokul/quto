@@ -17,10 +17,10 @@ namespace Quto
         };
 
         /*!
- * \brief The LoggingPlugin class
- * \author Gokul Kartha <kartha.gokul@gmail.com>
- * This interface can be used to write your own logger for example a Bluetooth Logger,a logger over Sockets etc.
- */
+        * \brief The LoggingPlugin class
+        * \author Gokul Kartha <kartha.gokul@gmail.com>
+        * This interface can be used to write your own logger for example a Bluetooth Logger,a logger over Sockets etc.
+        */
         class LoggingPlugin
         {
             public:
@@ -35,34 +35,34 @@ namespace Quto
         };
 
         /*!
- * \brief The Logger class
- * \author Gokul Kartha <kartha.gokul@gmail.com>
- * The logger class,which can be injected to the application using installEventFilter.
- */
+        * \brief The Logger class
+        * \author Gokul Kartha <kartha.gokul@gmail.com>
+        * The logger class,which can be injected to the application using installEventFilter.
+        */
         class Logger : public QObject
         {
                 Q_OBJECT
             public:
                 /*!
-     * \brief Logger
-     * \param parent
-     */
+                * \brief Logger
+                * \param parent
+                */
                 explicit Logger(QObject *parent = 0);
                 /*!
-     * \brief ~Logger
-     */
+                * \brief ~Logger
+                */
                 virtual ~Logger();
                 /*!
-     * \brief registerPlugin
-     * \param aPlugin
-     * \return
-     */
+                * \brief registerPlugin
+                * \param aPlugin
+                * \return
+                */
                 bool registerPlugin(LoggingPlugin *aPlugin);
                 /*!
-     * \brief unregisterPlugin
-     * \param aPlugin
-     * \return
-     */
+                * \brief unregisterPlugin
+                * \param aPlugin
+                * \return
+                */
                 bool deregisterPlugin(LoggingPlugin *aPlugin);
 
             private:
