@@ -1,5 +1,7 @@
 #include "propertybankprivate.h"
 
+using namespace Quto::Core;
+
 PropertyBankPrivate::PropertyBankPrivate(QObject *parent) :
     QObject(parent)
 {

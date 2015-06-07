@@ -5,21 +5,32 @@
 #include <QString>
 #include <QVariant>
 
-class PropertyBankPrivate;
-class PropertyBank : public QObject
+
+namespace Quto
 {
-        Q_OBJECT
-    public:
-        explicit PropertyBank(QObject *parent = 0);
-        Q_INVOKABLE QObject* getPropertyAccount(const QString &aAccountNumber);
+    namespace Core
+    {
+        class PropertyBankPrivate;
+        /*!
+        * \brief The PropertyBank class
+        * \author Gokul Kartha <kartha.gokul@gmail.com>
+        */
+        class PropertyBank : public QObject
+        {
+                Q_OBJECT
+            public:
+                explicit PropertyBank(QObject *parent = 0);
+                Q_INVOKABLE QObject* getPropertyAccount(const QString &aAccountNumber);
 
-    signals:
+            signals:
 
-    public slots:
+            public slots:
 
-    private:
-        PropertyBankPrivate *d;
+            private:
+                PropertyBankPrivate *d;
 
-};
+        };
+    }
+}
 
 #endif // PROPERTYBANK_H

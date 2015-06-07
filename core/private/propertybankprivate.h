@@ -4,18 +4,24 @@
 #include <QObject>
 #include <QHash>
 
-class PropertyBankPrivate : public QObject
+namespace Quto
 {
-        Q_OBJECT
-    public:
-        explicit PropertyBankPrivate(QObject *parent = 0);
-        QObject* getPropertyAccount(const QString &aAccountNumber);
-    signals:
+    namespace Core
+    {
+        class PropertyBankPrivate : public QObject
+        {
+                Q_OBJECT
+            public:
+                explicit PropertyBankPrivate(QObject *parent = 0);
+                QObject* getPropertyAccount(const QString &aAccountNumber);
+            signals:
 
-    public slots:
+            public slots:
 
-    private:
-        QHash<QString,QObject*> mAccounts;
-};
+            private:
+                QHash<QString,QObject*> mAccounts;
+        };
+    }
+}
 
 #endif // PROPERTYBANKPRIVATE_H

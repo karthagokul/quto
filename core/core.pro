@@ -12,7 +12,9 @@ HEADERS += \
     servicerunner.h \
     service.h \
     propertybank.h \
-    private/propertybankprivate.h
+    private/propertybankprivate.h \
+    basedomain.h \
+    popupmanager.h
 
 SOURCES += \
     logger.cpp \
@@ -24,4 +26,17 @@ SOURCES += \
     servicerunner.cpp \
     service.cpp \
     propertybank.cpp \
-    private/propertybankprivate.cpp
+    private/propertybankprivate.cpp \
+    popupmanager.cpp
+
+OTHER_FILES += \
+    ../guilab/QutoLabel.qml \
+    ../guilab/QutoPage.qml \
+    ../guilab/QutoButton.qml \
+    ../guilab/QutoList.qml \
+    ../guilab/QutoText.qml \
+    ../guilab/QutoGrid.qml \
+    ../guilab/quto_default_theme.js
+
+RESOURCES += \
+    quto-core.qrc
