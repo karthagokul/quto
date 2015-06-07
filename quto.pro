@@ -7,4 +7,4 @@ TEMPLATE = subdirs
 
 SUBDIRS = core \
           utils \
-          app
+          example-app

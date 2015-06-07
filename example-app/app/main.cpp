@@ -1,5 +1,5 @@
 #include "application.h"
-
+#include "musicpropertyaccount.h"
 
 int main(int argc,char **argv)
 {
