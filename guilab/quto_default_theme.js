@@ -1,5 +1,16 @@
 .pragma library
 
-function func() {
+//Declare the properties by element
 
-}
+//Page
+
+//Button
+
+//Label
+
+//Text
+
+//List
+
+//Grid
+
