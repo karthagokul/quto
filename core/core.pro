@@ -1,5 +1,6 @@
 TEMPLATE = lib
-TARGET = ../../libs/qutocore
+CONFIG += static
+TARGET = ../libs/qutocore
 
 HEADERS += \
     logger.h \

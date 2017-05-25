@@ -1,7 +1,7 @@
 #ifndef DOMAIN_INTERFACE_H
 #define DOMAIN_INTERFACE_H
 
-#include <QObject>
+#include "coreobject.h"
 #include <QUrl>
 #include <QString>
 
@@ -13,7 +13,7 @@ namespace Quto
          * \brief The BaseDomain class
          * \author Gokul Kartha <kartha.gokul@gmail.com>
          */
-        class BaseDomain:public QObject
+        class BaseDomain:public CoreObject
         {
                 Q_OBJECT
 
@@ -21,7 +21,7 @@ namespace Quto
                 BaseDomain(QObject *parent,const QString &aName,\
                            const QString &aAuthor,\
                            const QString &aHomePageUrl):
-                    QObject(parent),
+                    CoreObject(parent),
                     mName(aName),
                     mAuthor(aAuthor),
                     mHomePageURL(aHomePageUrl)
@@ -56,7 +56,6 @@ namespace Quto
                 QString mName;
                 QString mAuthor;
                 QUrl mHomePageURL;
-
         };
     }
 }
